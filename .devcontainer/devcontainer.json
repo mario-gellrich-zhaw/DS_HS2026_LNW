@@ -72,5 +72,5 @@
   },
   "postCreateCommand": "pip install -r requirements.txt",
   "postStartCommand": "docker compose up -d --wait",
-  "postAttachCommand": "code --uninstall-extension ms-python.vscode-pylance || true"
+  "postAttachCommand": "bash .devcontainer/remove-blocked-extensions.sh"
 }
