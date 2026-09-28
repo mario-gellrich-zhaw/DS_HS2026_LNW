@@ -1,10 +1,14 @@
 {
   "name": "Data Science HS2026 LNW 01",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
   "build": {
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2.17.0": {}
   },
   "customizations": {
     "vscode": {
