@@ -1,0 +1,64 @@
+{
+  "name": "Data Science HS2026 LNW 01",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "analytic-signal.preview-pdf",
+        "grapecity.gc-excelviewer",
+        "mechatroner.rainbow-csv",
+        "-github.copilot",
+        "-github.copilot-chat",
+        "-anthropic.claude-code",
+        "-openai.chatgpt",
+        "-google.geminicodeassist",
+        "-amazonwebservices.amazon-q-vscode",
+        "-continue.continue",
+        "-saoudrizwan.claude-dev",
+        "-rooveterinaryinc.roo-cline",
+        "-kilocode.kilo-code",
+        "-codeium.codeium",
+        "-tabnine.tabnine-vscode",
+        "-sourcegraph.cody-ai",
+        "-supermaven.supermaven",
+        "-codium.codium",
+        "-blackboxapp.blackbox",
+        "-danielsanmedium.dscodegpt",
+        "-visualstudioexptteam.vscodeintellicode",
+        "-mtxr.sqltools",
+        "-ms-ossdata.vscode-pgsql",
+        "-ms-mssql.mssql",
+        "-cweijan.vscode-database-client2",
+        "-dbcode.dbcode",
+        "-ckolkman.vscode-postgres"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Default Dark+",
+        "editor.rulers": [
+          80
+        ],
+        "workbench.iconTheme": "vs-seti",
+        "chat.disableAIFeatures": true,
+        "github.copilot.enable": {
+          "*": false
+        },
+        "editor.inlineSuggest.enabled": false,
+        "extensions.ignoreRecommendations": true,
+        "editor.quickSuggestions": {
+          "other": "off",
+          "comments": "off",
+          "strings": "off"
+        },
+        "editor.wordBasedSuggestions": "off",
+        "editor.snippetSuggestions": "none",
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.tabCompletion": "off",
+        "python.languageServer": "None",
+        "jupyter.enableKernelCompletions": false
+      }
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postStartCommand": "docker compose up -d"
+}
