@@ -13,12 +13,3 @@ PostgreSQL, machine learning.
 ## Database
 Host: localhost (from the notebook) · Port: 5432 · Database: postgres ·
 User: pgadmin · Password: geheim
-
-## Rules for the assessment
-- Allowed: all course materials, the internet for help and documentation pages
-  (search only without AI summaries, e.g. Google with the "Web" filter).
-- Not allowed: any form of AI (Copilot, chat assistants, AI extensions, AI tools
-  in the terminal, AI summaries in search engines), pgAdmin, additional
-  extensions or packages, communication with other people.
-- AI features in VS Code are turned off in this codespace and must not be turned
-  back on.

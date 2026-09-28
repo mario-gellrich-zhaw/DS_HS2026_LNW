@@ -1,5 +1,9 @@
 {
   "name": "Data Science HS2026 LNW 01",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -60,5 +64,5 @@
     }
   },
   "postCreateCommand": "pip install -r requirements.txt",
-  "postStartCommand": "docker compose up -d"
+  "postStartCommand": "docker compose up -d --wait"
 }
