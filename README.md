@@ -11,5 +11,5 @@ PostgreSQL, machine learning.
    `DS_HS2026_LNW_I_Example/AP01`) and run the preparation section.
 
 ## Database
-Host: db (from the notebook) · Port: 5432 · Database: postgres ·
+Host: localhost (from the notebook) · Port: 5432 · Database: postgres ·
 User: pgadmin · Password: geheim
