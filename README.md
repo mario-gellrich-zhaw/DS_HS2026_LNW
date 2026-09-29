@@ -11,5 +11,5 @@ PostgreSQL, machine learning.
    run the preparation section.
 
 ## Database
-Host: localhost (from the notebook) · Port: 5432 · Database: postgres ·
+Host: db (from the notebook) · Port: 5432 · Database: postgres ·
 User: pgadmin · Password: geheim

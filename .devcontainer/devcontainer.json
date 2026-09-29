@@ -4,12 +4,10 @@
     "cpus": 4,
     "memory": "16gb"
   },
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2.17.0": {}
-  },
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/DS_HS2026_LNW",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -70,7 +68,5 @@
       }
     }
   },
-  "postCreateCommand": "pip install -r requirements.txt",
-  "postStartCommand": "docker compose up -d --wait",
   "postAttachCommand": "bash .devcontainer/remove-blocked-extensions.sh"
 }

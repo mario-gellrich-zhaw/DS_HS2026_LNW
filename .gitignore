@@ -1,5 +1,8 @@
+# Python files
 __pycache__/
-
 .ipynb_checkpoints/
 
-MEP_HS2026/
+# Exam files
+cinema_er_diagram.png
+generate_cinema_db.py
+generate_er_diagram.py
