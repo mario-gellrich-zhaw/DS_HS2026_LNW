@@ -19,7 +19,7 @@
         "analytic-signal.preview-pdf",
         "grapecity.gc-excelviewer",
         "mechatroner.rainbow-csv",
-        "-ms-python.vscode-pylance",
+        "ms-python.vscode-pylance",
         "-github.copilot",
         "-github.copilot-chat",
         "-anthropic.claude-code",
@@ -66,7 +66,16 @@
         "editor.snippetSuggestions": "none",
         "editor.suggestOnTriggerCharacters": false,
         "editor.tabCompletion": "off",
-        "python.languageServer": "None",
+        "python.languageServer": "Pylance",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8",
+          "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+          },
+          "editor.suggestOnTriggerCharacters": true
+        },
         "jupyter.enableKernelCompletions": false
       }
     }
