@@ -7,8 +7,8 @@ PostgreSQL, machine learning.
 1. Create a new codespace from this repository (with Settings Sync turned off).
 2. Wait until the setup has finished (Python packages installed, database
    container started).
-3. Open the notebook of the work package (e.g. `MEP_DS_2026_LNW_I/AP01`) and
-   run the preparation section.
+3. Open the notebook of the work package (e.g.
+   `DS_HS2026_LNW_I_Example/AP01`) and run the preparation section.
 
 ## Database
 Host: db (from the notebook) · Port: 5432 · Database: postgres ·
