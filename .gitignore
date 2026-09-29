@@ -3,6 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Exam files
-cinema_er_diagram.png
-generate_cinema_db.py
-generate_er_diagram.py
+# cinema_er_diagram.png
+# generate_cinema_db.py
+# generate_er_diagram.py
