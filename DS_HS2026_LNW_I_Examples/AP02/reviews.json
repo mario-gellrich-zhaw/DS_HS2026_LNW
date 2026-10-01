@@ -1,0 +1,644 @@
+{
+  "api": "PhoneMarkt Reviews API (fiktiv)",
+  "endpoint": "/v1/reviews?category=smartphones",
+  "retrieved_at": "2026-09-15T08:30:00Z",
+  "status": 200,
+  "count": 127,
+  "results": [
+    {
+      "product_id": "PM-09871",
+      "review_count": 412,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-09874",
+      "review_count": 158,
+      "avg_score": 3.6
+    },
+    {
+      "product_id": "PM-09902",
+      "review_count": 233,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-09917",
+      "review_count": 61,
+      "avg_score": 2.9
+    },
+    {
+      "product_id": "PM-10001",
+      "review_count": 83,
+      "avg_score": 2.9
+    },
+    {
+      "product_id": "PM-10002",
+      "review_count": 134,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10003",
+      "review_count": 41,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10004",
+      "review_count": 196,
+      "avg_score": 2.9
+    },
+    {
+      "product_id": "PM-10005",
+      "review_count": 18,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10006",
+      "review_count": 43,
+      "avg_score": 3.0
+    },
+    {
+      "product_id": "PM-10007",
+      "review_count": 45,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10008",
+      "review_count": 152,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10009",
+      "review_count": 77,
+      "avg_score": 3.0
+    },
+    {
+      "product_id": "PM-10010",
+      "review_count": 121,
+      "avg_score": 2.8
+    },
+    {
+      "product_id": "PM-10011",
+      "review_count": 120,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10012",
+      "review_count": 23,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10013",
+      "review_count": 120,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10014",
+      "review_count": 43,
+      "avg_score": 3.2
+    },
+    {
+      "product_id": "PM-10015",
+      "review_count": 47,
+      "avg_score": 3.0
+    },
+    {
+      "product_id": "PM-10016",
+      "review_count": 26,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10017",
+      "review_count": 87,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10018",
+      "review_count": 104,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10019",
+      "review_count": 271,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10020",
+      "review_count": 74,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10022",
+      "review_count": 22,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10023",
+      "review_count": 28,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10024",
+      "review_count": 50,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10026",
+      "review_count": 22,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-10027",
+      "review_count": 125,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10028",
+      "review_count": 26,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10030",
+      "review_count": 69,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10032",
+      "review_count": 212,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10033",
+      "review_count": 71,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10034",
+      "review_count": 70,
+      "avg_score": 3.7
+    },
+    {
+      "product_id": "PM-10035",
+      "review_count": 43,
+      "avg_score": 2.9
+    },
+    {
+      "product_id": "PM-10036",
+      "review_count": 94,
+      "avg_score": 2.5
+    },
+    {
+      "product_id": "PM-10037",
+      "review_count": 275,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10038",
+      "review_count": 71,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10039",
+      "review_count": 242,
+      "avg_score": 4.7
+    },
+    {
+      "product_id": "PM-10040",
+      "review_count": 159,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10041",
+      "review_count": 34,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10042",
+      "review_count": 11,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10043",
+      "review_count": 12,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10044",
+      "review_count": 93,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10045",
+      "review_count": 63,
+      "avg_score": 2.8
+    },
+    {
+      "product_id": "PM-10046",
+      "review_count": 131,
+      "avg_score": 4.7
+    },
+    {
+      "product_id": "PM-10047",
+      "review_count": 63,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10048",
+      "review_count": 34,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10049",
+      "review_count": 30,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10050",
+      "review_count": 96,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10052",
+      "review_count": 25,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10053",
+      "review_count": 4,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10054",
+      "review_count": 4,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10055",
+      "review_count": 19,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-10056",
+      "review_count": 151,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-10058",
+      "review_count": 9,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10059",
+      "review_count": 75,
+      "avg_score": 3.0
+    },
+    {
+      "product_id": "PM-10061",
+      "review_count": 93,
+      "avg_score": 3.3
+    },
+    {
+      "product_id": "PM-10062",
+      "review_count": 110,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-10063",
+      "review_count": 286,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10064",
+      "review_count": 25,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10065",
+      "review_count": 62,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10066",
+      "review_count": 18,
+      "avg_score": 3.7
+    },
+    {
+      "product_id": "PM-10067",
+      "review_count": 21,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10068",
+      "review_count": 181,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10069",
+      "review_count": 284,
+      "avg_score": 3.7
+    },
+    {
+      "product_id": "PM-10070",
+      "review_count": 794,
+      "avg_score": 3.2
+    },
+    {
+      "product_id": "PM-10071",
+      "review_count": 149,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10072",
+      "review_count": 64,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10073",
+      "review_count": 52,
+      "avg_score": 2.8
+    },
+    {
+      "product_id": "PM-10074",
+      "review_count": 133,
+      "avg_score": 2.7
+    },
+    {
+      "product_id": "PM-10076",
+      "review_count": 31,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10077",
+      "review_count": 16,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10079",
+      "review_count": 36,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10080",
+      "review_count": 71,
+      "avg_score": 3.2
+    },
+    {
+      "product_id": "PM-10081",
+      "review_count": 42,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10082",
+      "review_count": 110,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10083",
+      "review_count": 67,
+      "avg_score": 4.6
+    },
+    {
+      "product_id": "PM-10085",
+      "review_count": 6,
+      "avg_score": 3.6
+    },
+    {
+      "product_id": "PM-10086",
+      "review_count": 15,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10087",
+      "review_count": 95,
+      "avg_score": 4.0
+    },
+    {
+      "product_id": "PM-10088",
+      "review_count": 390,
+      "avg_score": 3.6
+    },
+    {
+      "product_id": "PM-10089",
+      "review_count": 35,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10091",
+      "review_count": 15,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10092",
+      "review_count": 4,
+      "avg_score": 4.5
+    },
+    {
+      "product_id": "PM-10093",
+      "review_count": 429,
+      "avg_score": 3.3
+    },
+    {
+      "product_id": "PM-10094",
+      "review_count": 148,
+      "avg_score": 4.8
+    },
+    {
+      "product_id": "PM-10095",
+      "review_count": 34,
+      "avg_score": 4.5
+    },
+    {
+      "product_id": "PM-10097",
+      "review_count": 144,
+      "avg_score": 3.7
+    },
+    {
+      "product_id": "PM-10098",
+      "review_count": 272,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10099",
+      "review_count": 16,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10100",
+      "review_count": 197,
+      "avg_score": 4.2
+    },
+    {
+      "product_id": "PM-10101",
+      "review_count": 10,
+      "avg_score": 4.7
+    },
+    {
+      "product_id": "PM-10102",
+      "review_count": 16,
+      "avg_score": 4.5
+    },
+    {
+      "product_id": "PM-10103",
+      "review_count": 80,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10104",
+      "review_count": 30,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10105",
+      "review_count": 1280,
+      "avg_score": 4.7
+    },
+    {
+      "product_id": "PM-10106",
+      "review_count": 21,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10107",
+      "review_count": 152,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10108",
+      "review_count": 55,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10109",
+      "review_count": 49,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10110",
+      "review_count": 62,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10111",
+      "review_count": 15,
+      "avg_score": 4.7
+    },
+    {
+      "product_id": "PM-10112",
+      "review_count": 22,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10115",
+      "review_count": 165,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10116",
+      "review_count": 22,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10117",
+      "review_count": 86,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10118",
+      "review_count": 8,
+      "avg_score": 4.4
+    },
+    {
+      "product_id": "PM-10119",
+      "review_count": 19,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10121",
+      "review_count": 123,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10122",
+      "review_count": 21,
+      "avg_score": 4.5
+    },
+    {
+      "product_id": "PM-10124",
+      "review_count": 99,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10125",
+      "review_count": 75,
+      "avg_score": 3.4
+    },
+    {
+      "product_id": "PM-10126",
+      "review_count": 74,
+      "avg_score": 3.8
+    },
+    {
+      "product_id": "PM-10128",
+      "review_count": 140,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10129",
+      "review_count": 107,
+      "avg_score": 3.1
+    },
+    {
+      "product_id": "PM-10130",
+      "review_count": 203,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10131",
+      "review_count": 101,
+      "avg_score": 4.1
+    },
+    {
+      "product_id": "PM-10132",
+      "review_count": 17,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10133",
+      "review_count": 12,
+      "avg_score": 4.6
+    },
+    {
+      "product_id": "PM-10134",
+      "review_count": 126,
+      "avg_score": 3.2
+    },
+    {
+      "product_id": "PM-10136",
+      "review_count": 151,
+      "avg_score": 3.6
+    },
+    {
+      "product_id": "PM-10138",
+      "review_count": 95,
+      "avg_score": 3.9
+    },
+    {
+      "product_id": "PM-10139",
+      "review_count": 99,
+      "avg_score": 3.5
+    },
+    {
+      "product_id": "PM-10140",
+      "review_count": 18,
+      "avg_score": 4.3
+    },
+    {
+      "product_id": "PM-10141",
+      "review_count": 60,
+      "avg_score": 4.5
+    },
+    {
+      "product_id": "PM-10142",
+      "review_count": 134,
+      "avg_score": 3.9
+    }
+  ]
+}
