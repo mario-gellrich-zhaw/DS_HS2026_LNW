@@ -39,9 +39,9 @@ PM-10037,Nothing,Phone (3a),128,Blue,6.77,5000,349.0,Lieferbar in 2–5 Tagen
 PM-10038,Apple,iPhone 16e,256,Black,6.1,4005,639.0,Sofort lieferbar
 PM-10039,Samsung,Galaxy S25 Ultra,256,Titanium Silverblue,6.9,5000,1149.0,Sofort lieferbar
 PM-10040,Samsung,Galaxy A16 5G,128,Light Green,6.7,5000,199.0,Sofort lieferbar
-PM-10041,Samsung,Galaxy Z Fold7,512,Blue Shadow,8.0,4400,2049.0,Sofort lieferbar
+PM-10041,Samsung,Galaxy Z Fold7,512,Blue Shadow,8.0,4400,,Sofort lieferbar
 PM-10042,Xiaomi,Xiaomi 15T Pro,512,Mocha Gold,6.83,5500,899.0,Sofort lieferbar
-PM-10043,Apple,iPhone 17 Pro Max,1024,Cosmic Orange,6.9,4832,,Vorbestellung
+PM-10043,Apple,iPhone 17 Pro Max,1024,Cosmic Orange,6.9,4832,1659.0,Vorbestellung
 PM-10044,Samsung,Galaxy S25,256,Navy,6.2,4000,899.0,Lieferbar in 2–5 Tagen
 PM-10045,Motorola,edge 60,256,Shamrock,6.67,5200,319.0,Sofort lieferbar
 PM-10046,Samsung,Galaxy S25+,256,Navy,6.7,4900,999.0,Vorbestellung
@@ -66,7 +66,7 @@ PM-10064,Apple,iPhone 17,512,Black,6.3,3692,999.0,Sofort lieferbar
 PM-10065,Apple,iPhone 17 Pro,512,Deep Blue,6.3,4252,1349.0,Sofort lieferbar
 PM-10066,Samsung,Galaxy Z Fold7,256,Blue Shadow,8.0,4400,1899.0,Sofort lieferbar
 PM-10067,Nothing,Phone (3a),256,Blue,6.77,5000,399.0,Vorbestellung
-PM-10068,OnePlus,OnePlus 13,512,Black Eclipse,6.82,6000,,Sofort lieferbar
+PM-10068,OnePlus,OnePlus 13,512,Black Eclipse,6.82,6000,1049.0,Sofort lieferbar
 PM-10069,Samsung,Galaxy Z Flip7,256,Coralred,6.9,4300,1099.0,Sofort lieferbar
 PM-10070,Xiaomi,Redmi 15 5G,256,Titan Gray,6.9,7000,229.0,Lieferbar in 2–5 Tagen
 PM-10071,Motorola,razr 60 ultra,512,Scarab,7.0,4700,1099.0,Sofort lieferbar
@@ -83,9 +83,9 @@ PM-10081,Nothing,Phone (3a),128,White,6.77,5000,349.0,Sofort lieferbar
 PM-10082,Apple,iPhone 16,256,Black,6.1,3561,849.0,Sofort lieferbar
 PM-10083,Google,Pixel 10 Pro Fold,1024,Jade,8.0,5015,,Sofort lieferbar
 PM-10084,Samsung,Galaxy Z Flip7,256,Blue Shadow,6.9,4300,1099.0,Lieferbar in 2–5 Tagen
-PM-10085,Google,Pixel 10 Pro XL,1024,Porcelain,6.8,5200,,Sofort lieferbar
+PM-10085,Google,Pixel 10 Pro XL,1024,Porcelain,6.8,5200,1549.0,Sofort lieferbar
 PM-10086,Google,Pixel 10 Pro,128,Obsidian,6.3,4870,949.0,Vorbestellung
-PM-10087,Samsung,Galaxy Z Fold7,512,Jetblack,8.0,4400,2049.0,Sofort lieferbar
+PM-10087,Samsung,Galaxy Z Fold7,512,Jetblack,8.0,4400,,Sofort lieferbar
 PM-10088,Sony,Xperia 1 VII,512,Slate Black,6.5,5000,1389.0,Sofort lieferbar
 PM-10089,Apple,iPhone 17 Pro,1024,Silver,6.3,4252,1469.0,Sofort lieferbar
 PM-10090,Xiaomi,Xiaomi 15T Pro,256,Mocha Gold,6.83,5500,749.0,Vorbestellung
@@ -111,7 +111,7 @@ PM-10109,Samsung,Galaxy S25,128,Navy,6.2,4000,799.0,Vorbestellung
 PM-10110,Motorola,razr 60 ultra,512,Rio Red,7.0,4700,1099.0,Vorbestellung
 PM-10111,Apple,iPhone 17,512,Lavender,6.3,3692,899.0,Sofort lieferbar
 PM-10112,OnePlus,OnePlus 13,512,Arctic Dawn,6.82,6000,1049.0,Sofort lieferbar
-PM-10113,Xiaomi,Xiaomi 15 Ultra,1024,Silver Chrome,6.73,5410,,Sofort lieferbar
+PM-10113,Xiaomi,Xiaomi 15 Ultra,1024,Silver Chrome,6.73,5410,1319.0,Sofort lieferbar
 PM-10114,Apple,iPhone 17 Pro Max,256,Cosmic Orange,6.9,4832,1349.0,Sofort lieferbar
 PM-10115,Xiaomi,Redmi 15 5G,256,Ripple Green,6.9,7000,229.0,Sofort lieferbar
 PM-10116,Xiaomi,Xiaomi 15T Pro,1024,Mocha Gold,6.83,5500,1149.0,Sofort lieferbar
@@ -125,7 +125,7 @@ PM-10123,Google,Pixel 10,256,Lemongrass,6.3,4970,899.0,Sofort lieferbar
 PM-10124,Google,Pixel 10 Pro,256,Moonstone,6.3,4870,1099.0,Sofort lieferbar
 PM-10125,Google,Pixel 9a,128,Iris,6.3,5100,449.0,Sofort lieferbar
 PM-10126,Apple,iPhone 16,256,Teal,6.1,3561,849.0,Sofort lieferbar
-PM-10127,Google,Pixel 10 Pro Fold,512,Jade,8.0,5015,1949.0,Lieferbar in 2–5 Tagen
+PM-10127,Google,Pixel 10 Pro Fold,512,Jade,8.0,5015,,Lieferbar in 2–5 Tagen
 PM-10128,Sony,Xperia 10 VII,128,Charcoal Black,6.1,5000,389.0,Sofort lieferbar
 PM-10129,Samsung,Galaxy A56 5G,128,Awesome Olive,6.7,5000,429.0,Sofort lieferbar
 PM-10130,Samsung,Galaxy S25,128,Mint,6.2,4000,799.0,Lieferbar in 2–5 Tagen
@@ -138,6 +138,6 @@ PM-10136,Apple,iPhone 16,512,Black,6.1,3561,999.0,Sofort lieferbar
 PM-10137,Samsung,Galaxy Z Fold7,256,Jetblack,8.0,4400,1749.0,Sofort lieferbar
 PM-10138,Samsung,Galaxy S25,256,Mint,6.2,4000,899.0,Sofort lieferbar
 PM-10139,Samsung,Galaxy A36 5G,128,Awesome Black,6.7,5000,309.0,Vorbestellung
-PM-10140,Google,Pixel 10 Pro Fold,512,Moonstone,8.0,5015,1949.0,Lieferbar in 2–5 Tagen
+PM-10140,Google,Pixel 10 Pro Fold,512,Moonstone,8.0,5015,,Lieferbar in 2–5 Tagen
 PM-10141,Apple,iPhone 17 Pro,256,Silver,6.3,4252,1199.0,Lieferbar in 2–5 Tagen
 PM-10142,Apple,iPhone 16e,128,White,6.1,4005,599.0,Lieferbar in 2–5 Tagen
