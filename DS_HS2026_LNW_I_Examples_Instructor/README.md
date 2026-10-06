@@ -6,7 +6,7 @@
 
 | File | Purpose |
 |---|---|
-| `AP01/generate_cinema_db.py` | Original generator for `cinema.db` and `cinema_data.xlsx` (see warning below) |
+| `AP01/generate_cinema_db.py` | Generates `cinema.db` and `cinema_data.xlsx` (embeds `cinema_er_diagram.png`) |
 | `AP01/generate_er_diagram.py` | Draws the ER diagram `cinema_er_diagram.png` (written to this folder) |
 | `AP01/cinema_er_diagram.png` | ER diagram of `cinema.db` |
 | `AP02/generate_smartphone_data.py` | Generates the AP02 data: `html/`, `reviews.json`, `smartphones_clean.csv`, `smartphone_data.xlsx` |
@@ -19,10 +19,13 @@ The generators write their data files to the matching work package folder
 python DS_HS2026_LNW_I_Examples_Instructor/AP03/generate_bicycle_data.py
 ```
 
-The AP02 and AP03 generators reproduce the committed data files exactly.
+All generators reproduce the committed data files:
 
-**Warning – AP01:** do not run `generate_cinema_db.py`. The committed `cinema.db` and
-`cinema_data.xlsx` were extended after generation (cinema «Kino Aurora» without
-screenings, customers CU0501–CU0505 with inconsistent `membership_type`, sheets
-«Description» and «ER-Diagram»). The script does not reproduce these changes and
-would overwrite the exam data.
+- AP02, AP03 and `cinema_er_diagram.png`: byte-identical files, except for the
+  timestamps in `smartphone_data.xlsx`.
+- AP01: `cinema.db` has the same schema and the same rows in the same order (identical
+  SQL dump); only the internal page layout differs. `cinema_data.xlsx` has the same
+  sheets, values, formats and image; only the timestamps differ.
+
+To rebuild AP01, run `generate_er_diagram.py` first, because `generate_cinema_db.py`
+embeds the PNG in `cinema_data.xlsx`.

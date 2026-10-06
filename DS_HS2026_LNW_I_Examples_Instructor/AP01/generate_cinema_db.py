@@ -1,11 +1,13 @@
 """
 Generate cinema.db and cinema_data.xlsx for the DS HS2026 exam.
 
-WARNING: Do not run this script on the exam data. The current cinema.db and
-cinema_data.xlsx in DS_HS2026_LNW_I_Examples/AP01 were extended after
-generation (cinema C006 «Kino Aurora» without screenings, customers
-CU0501–CU0505 with inconsistent membership_type, sheets «Description» and
-«ER-Diagram»). This script does not reproduce them and would overwrite them.
+Output goes to DS_HS2026_LNW_I_Examples/AP01 and reproduces the exam data:
+same schema, same rows in the same order. Built-in data problems (used in the exam):
+  - cinema C006 «Kino Aurora» without screenings and staff (B1: LEFT JOIN)
+  - customers CU0501–CU0505 without tickets and with inconsistent
+    membership_type (B2: anti-join, C1: data quality)
+The Excel file contains the sheets «Description» and «ER-Diagram» (embeds
+cinema_er_diagram.png from this folder) followed by one sheet per table.
 
 Schema:
   movies      (movieid, title, genre, duration_min, release_year, director, age_rating)
@@ -20,6 +22,7 @@ import sqlite3, random, os
 from datetime import datetime, timedelta
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.drawing.image import Image as XLImage
 
 random.seed(42)
 
@@ -139,17 +142,35 @@ def gen_tickets(screenings, customers, n=2000):
         rows.append((tid, scid, cuid, pdt.strftime("%Y-%m-%d %H:%M:%S"), seat, paid))
     return rows
 
+# Added after the random generation, so that they do not change the random
+# draws: no screenings, staff or tickets refer to them.
+EXTRA_CINEMAS = [
+    ("C006","Kino Aurora",       "Winterthur",160),
+]
+
+EXTRA_CUSTOMERS = [
+    ("CU0501","Anna",  "Müller", "anna.müller501@example.com",   "1994-03-17","standard"),
+    ("CU0502","Thomas","Berger", "thomas.berger502@example.com", "1988-11-02","STANDARD"),
+    ("CU0503","Julia", "Schmid", "julia.schmid503@example.com",  "1996-06-25","Standart"),
+    ("CU0504","Kevin", "Keller", "kevin.keller504@example.com",  "2001-01-30","premium"),
+    ("CU0505","Sandra","Fischer","sandra.fischer505@example.com","1979-09-14","student"),
+]
+
 # ── build ─────────────────────────────────────────────────────────────────────
 staff      = gen_staff(30)
 customers  = gen_customers(500)
 screenings = gen_screenings(300)
 tickets    = gen_tickets(screenings, customers, 2000)
 
+cinemas    = CINEMAS + EXTRA_CINEMAS
+customers  = customers + EXTRA_CUSTOMERS
+
 # Output goes to the AP01 work package folder (DS_HS2026_LNW_I_Examples/AP01)
 OUT_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                         "..", "..", "DS_HS2026_LNW_I_Examples", "AP01"))
 DB_PATH = os.path.join(OUT_DIR, "cinema.db")
 XL_PATH = os.path.join(OUT_DIR, "cinema_data.xlsx")
+ER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cinema_er_diagram.png")
 
 # ── SQLite ────────────────────────────────────────────────────────────────────
 if os.path.exists(DB_PATH):
@@ -218,7 +239,7 @@ CREATE TABLE tickets (
 """)
 
 cur.executemany("INSERT INTO movies VALUES (?,?,?,?,?,?,?)", MOVIES)
-cur.executemany("INSERT INTO cinemas VALUES (?,?,?,?)", CINEMAS)
+cur.executemany("INSERT INTO cinemas VALUES (?,?,?,?)", cinemas)
 cur.executemany("INSERT INTO staff VALUES (?,?,?,?,?,?)", staff)
 cur.executemany("INSERT INTO screenings VALUES (?,?,?,?,?)", screenings)
 cur.executemany("INSERT INTO customers VALUES (?,?,?,?,?,?)", customers)
@@ -241,10 +262,99 @@ wb.remove(wb.active)  # remove default sheet
 HEADER_FILL  = PatternFill("solid", fgColor="2E4057")
 HEADER_FONT  = Font(color="FFFFFF", bold=True)
 ALT_FILL     = PatternFill("solid", fgColor="EAF0FB")
+# The sheets cinemas and customers were rewritten when the extra rows were
+# added; their shading also sets bgColor (looks the same in Excel)
+ALT_FILL_BG  = PatternFill("solid", fgColor="EAF0FB", bgColor="EAF0FB")
+TITLE_FILL   = PatternFill("solid", fgColor="457B9D")
+TITLE_ALIGN  = Alignment(horizontal="left", vertical="center")
+
+# Sheet «Description»: (table, description, [(column, description, data type, key)])
+DESCRIPTION = [
+    ("movies", "Filme mit Titel, Genre, Dauer, Erscheinungsjahr, Regisseur und Altersfreigabe", [
+        ("movieid",            "Eindeutige Kennung des Films", "Zeichenkette (String)", "Primary-Key"),
+        ("title",              "Titel des Films", "Zeichenkette (String)", ""),
+        ("genre",              "Genre des Films (z.B. Sci-Fi, Drama)", "Zeichenkette (String)", ""),
+        ("duration_min",       "Filmdauer in Minuten", "Ganzzahl (Integer)", ""),
+        ("release_year",       "Erscheinungsjahr des Films", "Ganzzahl (Integer)", ""),
+        ("director",           "Name des Regisseurs / der Regisseurin", "Zeichenkette (String)", ""),
+        ("age_rating",         "Altersfreigabe in Jahren (z.B. 6, 12, 16, 18)", "Ganzzahl (Integer)", ""),
+    ]),
+    ("cinemas", "Kinostandorte mit Name, Stadt und Gesamtanzahl Sitzplätze", [
+        ("cinemaid",           "Eindeutige Kennung des Kinos", "Zeichenkette (String)", "Primary-Key"),
+        ("name",               "Name des Kinos", "Zeichenkette (String)", ""),
+        ("city",               "Stadt, in der das Kino liegt", "Zeichenkette (String)", ""),
+        ("total_seats",        "Gesamtanzahl Sitzplätze im Kino", "Ganzzahl (Integer)", ""),
+    ]),
+    ("staff", "Mitarbeitende der Kinos mit Rolle, Einstellungsdatum und Kinozuordnung", [
+        ("staffid",            "Eindeutige Kennung des Mitarbeitenden", "Zeichenkette (String)", "Primary-Key"),
+        ("firstname",          "Vorname des Mitarbeitenden", "Zeichenkette (String)", ""),
+        ("lastname",           "Nachname des Mitarbeitenden", "Zeichenkette (String)", ""),
+        ("cinemaid",           "Kino, dem der Mitarbeitende zugeordnet ist", "Zeichenkette (String)", "Foreign-Key → cinemas"),
+        ("role",               "Rolle / Funktion (z.B. Kassier:in, Manager:in)", "Zeichenkette (String)", ""),
+        ("hire_date",          "Einstellungsdatum", "Datum (Date)", ""),
+    ]),
+    ("screenings", "Filmvorstellungen mit Datum, Uhrzeit, zugehörigem Kino und Basispreis", [
+        ("screeningid",        "Eindeutige Kennung der Vorstellung", "Zeichenkette (String)", "Primary-Key"),
+        ("movieid",            "Gezeigter Film", "Zeichenkette (String)", "Foreign-Key → movies"),
+        ("cinemaid",           "Kino, in dem die Vorstellung stattfindet", "Zeichenkette (String)", "Foreign-Key → cinemas"),
+        ("screening_datetime", "Datum und Uhrzeit der Vorstellung", "Datum/Zeit (DateTime)", ""),
+        ("base_price",         "Basispreis des Tickets für diese Vorstellung", "Dezimalzahl (Float)", ""),
+    ]),
+    ("customers", "Kundendaten mit E-Mail, Geburtsdatum und Mitgliedschaftstyp", [
+        ("customerid",         "Eindeutige Kennung des Kunden / der Kundin", "Zeichenkette (String)", "Primary-Key"),
+        ("firstname",          "Vorname", "Zeichenkette (String)", ""),
+        ("lastname",           "Nachname", "Zeichenkette (String)", ""),
+        ("email",              "E-Mail-Adresse (eindeutig)", "Zeichenkette (String)", ""),
+        ("birthdate",          "Geburtsdatum", "Datum (Date)", ""),
+        ("membership_type",    "Mitgliedschaftstyp (Standard, Premium, Student, Senior)", "Zeichenkette (String)", ""),
+    ]),
+    ("tickets", "Verkaufte Tickets mit Kaufzeitpunkt, Sitzplatznummer und bezahltem Preis", [
+        ("ticketid",           "Eindeutige Kennung des Tickets", "Zeichenkette (String)", "Primary-Key"),
+        ("screeningid",        "Vorstellung, für die das Ticket gilt", "Zeichenkette (String)", "Foreign-Key → screenings"),
+        ("customerid",         "Kunde / Kundin, dem/der das Ticket gehört", "Zeichenkette (String)", "Foreign-Key → customers"),
+        ("purchase_datetime",  "Kaufzeitpunkt des Tickets", "Datum/Zeit (DateTime)", ""),
+        ("seat_number",        "Platznummer (z.B. A1, C12)", "Zeichenkette (String)", ""),
+        ("paid_price",         "Tatsächlich bezahlter Preis in CHF", "Dezimalzahl (Float)", ""),
+    ]),
+]
+
+ws = wb.create_sheet(title="Description")
+r = 1
+for table, table_desc, columns in DESCRIPTION:
+    # title row
+    ws.cell(row=r, column=1, value=f"Tabelle: {table}")
+    ws.cell(row=r, column=2, value=table_desc)
+    for col in range(1, 5):
+        ws.cell(row=r, column=col).fill = TITLE_FILL
+    ws.cell(row=r, column=1).font = Font(color="FFFFFF", bold=True, size=11)
+    ws.cell(row=r, column=2).font = Font(color="FFFFFF", italic=True, size=10)
+    ws.cell(row=r, column=1).alignment = TITLE_ALIGN
+    ws.cell(row=r, column=2).alignment = TITLE_ALIGN
+    # header row
+    for col, h in enumerate(["Spalte", "Beschreibung", "Datentyp", "Primary-Key / Foreign-Key"], 1):
+        cell = ws.cell(row=r+1, column=col, value=h)
+        cell.font = HEADER_FONT
+        cell.fill = HEADER_FILL
+        cell.alignment = Alignment(horizontal="center")
+    # one row per column, every other row shaded (starting with the first)
+    for i, values in enumerate(columns):
+        for col, val in enumerate(values, 1):
+            if val:
+                ws.cell(row=r+2+i, column=col, value=val)
+            if i % 2 == 0:
+                ws.cell(row=r+2+i, column=col).fill = ALT_FILL
+    r += len(columns) + 3  # title, header, columns, blank row
+for col, width in zip("ABCD", [22, 58, 24, 28]):
+    ws.column_dimensions[col].width = width
+
+ws = wb.create_sheet(title="ER-Diagram")
+ws["B2"] = "ER (Entity-Relationship) Diagram Cinema DB"
+ws["B2"].font = Font(bold=True, size=12)
+ws.add_image(XLImage(ER_PATH), "B4")
 
 tables = {
     "movies":     (["movieid","title","genre","duration_min","release_year","director","age_rating"], MOVIES),
-    "cinemas":    (["cinemaid","name","city","total_seats"], CINEMAS),
+    "cinemas":    (["cinemaid","name","city","total_seats"], cinemas),
     "staff":      (["staffid","firstname","lastname","cinemaid","role","hire_date"], staff),
     "screenings": (["screeningid","movieid","cinemaid","screening_datetime","base_price"], screenings),
     "customers":  (["customerid","firstname","lastname","email","birthdate","membership_type"], customers),
@@ -253,6 +363,7 @@ tables = {
 
 for sheet_name, (headers, rows) in tables.items():
     ws = wb.create_sheet(title=sheet_name)
+    alt_fill = ALT_FILL_BG if sheet_name in ("cinemas", "customers") else ALT_FILL
     # header row
     for col, h in enumerate(headers, 1):
         cell = ws.cell(row=1, column=col, value=h)
@@ -264,11 +375,15 @@ for sheet_name, (headers, rows) in tables.items():
         for c_idx, val in enumerate(row, 1):
             cell = ws.cell(row=r_idx, column=c_idx, value=val)
             if r_idx % 2 == 0:
-                cell.fill = ALT_FILL
+                cell.fill = alt_fill
     # auto-width
     for col in ws.columns:
         max_len = max(len(str(c.value)) if c.value else 0 for c in col)
         ws.column_dimensions[col[0].column_letter].width = min(max_len + 2, 40)
 
 wb.save(XL_PATH)
+
+# Load and save once more, as was done when the file was extended: openpyxl
+# then writes the image outline exactly like in the exam file
+openpyxl.load_workbook(XL_PATH).save(XL_PATH)
 print(f"Excel  → {XL_PATH}")

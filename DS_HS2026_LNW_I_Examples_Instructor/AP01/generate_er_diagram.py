@@ -8,6 +8,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from PIL import Image
 
 fig, ax = plt.subplots(figsize=(22, 10))
 ax.set_xlim(0, 22)
@@ -227,4 +228,8 @@ ax.set_title("ER-Diagramm: cinema.db",
 plt.tight_layout()
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cinema_er_diagram.png")
 plt.savefig(out, dpi=150, bbox_inches="tight", facecolor=fig.get_facecolor())
+
+# Scale down to 1900 px width for the sheet «ER-Diagram» in cinema_data.xlsx
+img = Image.open(out)
+img.resize((1900, 858), Image.LANCZOS).save(out, optimize=True)
 print(f"ER diagram → {out}")
