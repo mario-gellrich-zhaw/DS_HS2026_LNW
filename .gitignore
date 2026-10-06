@@ -2,7 +2,11 @@
 __pycache__/
 .ipynb_checkpoints/
 
-# Exam files
-# cinema_er_diagram.png
-# generate_cinema_db.py
-# generate_er_diagram.py
+# Teaching and preparation files (keep locally, exclude from student checkouts)
+Slides/
+Slides_*.pdf
+generate_*.py
+*_Musterloesung.ipynb
+*_Loesung.ipynb
+*_Solution.ipynb
+cinema_er_diagram.png
