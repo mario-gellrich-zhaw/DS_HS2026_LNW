@@ -6,6 +6,9 @@
 
 | File | Purpose |
 |---|---|
+| `AP01/Slides/` | Lecture slides week 01, referred to in the AP01 tasks |
+| `AP02/Slides/` | Lecture slides week 04 (parts I and II) and week 05, cited in the AP02 worked solution |
+| `AP03/Slides/` | Lecture slides week 06 (supervised learning), cited in the AP03 worked solution |
 | `AP01/generate_cinema_db.py` | Generates `cinema.db` and `cinema_data.xlsx` (embeds `cinema_er_diagram.png`) |
 | `AP01/generate_er_diagram.py` | Draws the ER diagram `cinema_er_diagram.png` (written to this folder) |
 | `AP01/cinema_er_diagram.png` | ER diagram of `cinema.db` |

@@ -30,6 +30,5 @@ User: pgadmin · Password: geheim
 ## Instructor files
 
 [`DS_HS2026_LNW_I_Examples_Instructor`](DS_HS2026_LNW_I_Examples_Instructor) contains
-helper files for preparing the work packages (data generators, ER image). They are
-**not needed for the assessment** and are not part of any task. Lecture slides are
-kept locally and excluded from version control.
+helper files for preparing the work packages (lecture slides, data generators,
+ER image). They are **not needed for the assessment** and are not part of any task.
