@@ -19,12 +19,14 @@ User: pgadmin · Password: geheim
 - **AP01:** Management and use of relational data (cinema database).
 - **AP02:** Data acquisition, preparation and exploratory analysis (smartphone shop).
 - **AP03:** Machine learning with synthetic bicycle data (used-bike dealer «VeloMarkt»).
-  Open [the assessment notebook](DS_HS2026_LNW_I_Examples/AP03/AP03_Machine_Learning.ipynb)
-  or [the worked solution](DS_HS2026_LNW_I_Examples/AP03/AP03_Machine_Learning_Musterloesung.ipynb).
-  Both follow the AP01/AP02 format: eight tasks, 40 points, about 40 minutes.
+  Open [the assessment notebook](DS_HS2026_LNW_I_Examples/AP03/AP03_Machine_Learning.ipynb).
+  It follows the AP01/AP02 format: eight tasks, 40 points, about 40 minutes.
   Part A covers concept questions, Part B code diagnosis and Part C coding tasks.
   Topics are OLS regression, regression trees, random forest, classification trees,
-  confusion matrix and ROC/AUC. The notebooks cite the Week 06 slides.
+  confusion matrix and ROC/AUC.
   Run the setup first; the variable descriptions are in the notebook.
-  `bicycle_data.csv` is included. To reproduce it, run
-  `python DS_HS2026_LNW_I_Examples/AP03/generate_bicycle_data.py`.
+  `bicycle_data.csv` is included.
+
+Instructor slides, worked solutions, data generators and the separate ER image
+are kept locally and excluded from version control. The student notebooks,
+required data files and environment configuration are included in this repository.
