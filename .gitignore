@@ -6,7 +6,4 @@ __pycache__/
 Slides/
 Slides_*.pdf
 generate_*.py
-*_Musterloesung.ipynb
-*_Loesung.ipynb
-*_Solution.ipynb
 cinema_er_diagram.png
