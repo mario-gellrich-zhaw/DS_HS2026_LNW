@@ -27,6 +27,9 @@ User: pgadmin · Password: geheim
   Run the setup first; the variable descriptions are in the notebook.
   `bicycle_data.csv` is included.
 
-Instructor slides, worked solutions, data generators and the separate ER image
-are kept locally and excluded from version control. The student notebooks,
-required data files and environment configuration are included in this repository.
+## Instructor files
+
+[`DS_HS2026_LNW_I_Examples_Instructor`](DS_HS2026_LNW_I_Examples_Instructor) contains
+helper files for preparing the work packages (data generators, ER image). They are
+**not needed for the assessment** and are not part of any task. Lecture slides are
+kept locally and excluded from version control.

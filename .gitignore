@@ -2,8 +2,6 @@
 __pycache__/
 .ipynb_checkpoints/
 
-# Teaching and preparation files (keep locally, exclude from student checkouts)
+# Lecture slides (keep locally, exclude from version control)
 Slides/
 Slides_*.pdf
-generate_*.py
-cinema_er_diagram.png
