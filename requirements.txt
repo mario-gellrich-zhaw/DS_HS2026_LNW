@@ -1,14 +1,24 @@
+# Notebook-Umgebung
 jupyter==1.1.1
+
+# Datenverarbeitung und numerische Berechnungen
 pandas==3.0.6
 numpy==2.4.6
 scipy==1.17.1
+
+# Visualisierung
 matplotlib==3.11.2
+seaborn==0.13.2
+
+# Relationale Datenbanken (AP01)
 psycopg2-binary==2.9.13
 sqlalchemy==2.0.52
+
+# Excel-Dateien und HTML/XML-Verarbeitung (AP02)
 openpyxl==3.1.5
 beautifulsoup4==4.15.0
 lxml==6.1.3
 
+# Machine Learning und statistische Modellierung (AP03)
 scikit-learn==1.9.1
-seaborn==0.13.2
 statsmodels==0.15.0
