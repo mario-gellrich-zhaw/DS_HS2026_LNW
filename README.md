@@ -23,5 +23,5 @@ User: pgadmin · Password: geheim
 ## Lecturer files
 
 [`DS_HS2026_LNW_I_Examples_Lecturer_Only`](DS_HS2026_LNW_I_Examples_Lecturer_Only) contains
-helper files for preparing the work packages (lecture slides, data generators,
-ER image). They are **not needed for the assessment** and are not part of any task.
+helper files for preparing the (example) exams (data generators, ER diagram). 
+They are **not needed for the assessment** and are not part of any task.
