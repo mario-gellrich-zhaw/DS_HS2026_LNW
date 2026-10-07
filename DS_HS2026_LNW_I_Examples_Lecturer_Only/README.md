@@ -1,4 +1,4 @@
-# Instructor files – not needed for the assessment
+# Lecturer files – not needed for the assessment
 
 > **Hinweis für Studierende:** Dieser Ordner enthält nur Hilfsdateien zur Vorbereitung
 > der Arbeitspakete. Er ist **nicht prüfungsrelevant**. Alles, was Sie für die Prüfung
@@ -19,7 +19,7 @@ The generators write their data files to the matching work package folder
 `DS_HS2026_LNW_I_Examples/APxx` and can be run from any directory, e.g.
 
 ```bash
-python DS_HS2026_LNW_I_Examples_Instructor/AP03/generate_bicycle_data.py
+python DS_HS2026_LNW_I_Examples_Lecturer_Only/AP03/generate_bicycle_data.py
 ```
 
 All generators reproduce the committed data files:

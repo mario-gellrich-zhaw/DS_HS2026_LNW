@@ -27,8 +27,8 @@ User: pgadmin · Password: geheim
   Run the setup first; the variable descriptions are in the notebook.
   `bicycle_data.csv` is included.
 
-## Instructor files
+## Lecturer files
 
-[`DS_HS2026_LNW_I_Examples_Instructor`](DS_HS2026_LNW_I_Examples_Instructor) contains
+[`DS_HS2026_LNW_I_Examples_Lecturer_Only`](DS_HS2026_LNW_I_Examples_Lecturer_Only) contains
 helper files for preparing the work packages (lecture slides, data generators,
 ER image). They are **not needed for the assessment** and are not part of any task.
